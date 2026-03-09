@@ -35,6 +35,8 @@ const phrases = [
   "Spring Boot microservices.",
   "enterprise-grade REST APIs.",
   "Java full stack platforms.",
+  "Android and iOS mobile apps.",
+  "ecommerce platforms.",
   "payment-integrated business systems."
 ];
 
