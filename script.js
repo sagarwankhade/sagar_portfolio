@@ -145,12 +145,13 @@ contactForm?.addEventListener("submit", (event) => {
   const message = String(formData.get("message") || "").trim();
 
   if (formFeedback) {
-    formFeedback.textContent = `Thanks ${name || ""}. Opening your email client now.`;
+    formFeedback.textContent = `Thanks ${name || ""}. Opening WhatsApp now.`;
   }
 
-  const subject = encodeURIComponent(`Portfolio Inquiry from ${name || "Website Visitor"}`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-  window.location.href = `mailto:sagarpw03@gmail.com?subject=${subject}&body=${body}`;
+  const whatsappMessage = encodeURIComponent(
+    `Hello Sagar, I visited your portfolio and would like to discuss a project.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  );
+  window.location.href = `https://wa.me/918554068494?text=${whatsappMessage}`;
 
   contactForm.reset();
 });
